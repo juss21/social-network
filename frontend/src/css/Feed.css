@@ -1,0 +1,143 @@
+.Feed {
+  flex: 3;
+  height: calc(100vh - 60px);
+  background-color: #e7e7e7;
+  overflow-y: auto;
+  color: black;
+}
+
+.feed-container {
+  color: black;
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: fit-content;
+}
+
+.NewPost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.feed-posts {
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.feed-post {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.post-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.post-body {
+  font-size: 14px;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.image-content {
+  max-width: 800px;
+}
+
+.post-overlay {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.NewComment {
+  margin: 5px;
+}
+
+.post-commentbox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.comment-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-input-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.comment-input-container input {
+  flex: 1;
+  border: none;
+  padding: 5px;
+}
+
+.file-upload-button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.comment-input-button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.comment-input-button:hover {
+  background-color: #0056b3;
+}
+
+.follower-selection {
+  max-height: 10vh;
+  overflow-y: auto;
+}

@@ -1,0 +1,46 @@
+.Sidebar {
+  flex: 1;
+  background-color: #e7e7e7;
+  color: black;
+}
+
+.sidebar-container {
+  margin-left: 20px;
+}
+
+.ad-container {
+  margin-left: 20px;
+  max-width: 200px;
+}
+
+.ad1 {
+  width: 100%;
+}
+
+.sidebar-content {
+  margin-left: 20px;
+}
+
+.Sidebar a {
+  color: black;
+}
+
+.FollowersList {
+  padding: 20px;
+  background-color: #e7e7e7;
+}
+
+.GroupsList li,
+.FollowersList li {
+  cursor: pointer;
+}
+
+.followersOnProfile {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.GroupsList {
+  background-color: #e7e7e7;
+  padding: 20px;
+}

@@ -1,0 +1,130 @@
+.profile-container {
+  width: 100%;
+  flex: 3;
+  background-color: #e7e7e7;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container p {
+  color: black;
+  font-weight: bold;
+}
+
+.profile-info-container {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #e7e7e7;
+  display: flex;
+  height: 335px;
+}
+
+.profilepic {
+  border-radius: 5px;
+  border: 5px solid #ddd;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-info {
+  color: black;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.profile-posts {
+  position: relative;
+  background-color: #e7e7e7;
+  flex: 1;
+  overflow-y: auto;
+}
+.profile-pic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+.profile-container h1 {
+  color: black;
+}
+
+.ProfilePicture-Settings {
+  position: relative;
+}
+
+.ProfilePic-Save {
+  position: absolute;
+  right: 60px;
+}
+
+.ProfilePic-Cancel {
+  position: absolute;
+  right: 0;
+}
+.ProfilePic-Select {
+  position: absolute;
+  left: 0;
+}
+
+.Profile-Username-Edit-Container {
+  position: relative;
+}
+
+.ProfileUsername-Edit {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.ProfileUsername-Edit-Save {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+}
+
+.ProfileUsername-Edit-Cancel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.Profile-Description-Container {
+  width: 100%;
+  position: relative;
+}
+
+.Profile-Description-Edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Profile-Description-Edit-Cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Profile-Description-Edit-Save {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-privacy {
+  position: relative;
+}
+
+.Profile-Edit-Public {
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+}
