@@ -1,4 +1,4 @@
-# SOCIAL-NET<img src="https://github.com/juss21/social-network/raw/master/frontend/src/logo.svg" alt="Website Icon" width="40" height="40" />ORK
+# SOCIAL-NET<img src="https://github.com/juss21/social-network/raw/main/frontend/src/logo.svg" alt="Website Icon" width="40" height="40" />ORK
 
 ## ABOUT
 
