@@ -20,6 +20,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY ./backend ./backend
+COPY ./backend/database ./backend/database
 COPY --from=frontend /app/frontend/build ./frontend/build
 
 WORKDIR /app/backend
@@ -39,6 +40,7 @@ WORKDIR /app
 
 COPY --from=backend /app/backend/server ./server
 COPY --from=backend /app/frontend/build ./frontend/build
+COPY --from=backend /app/backend/database ./backend/database
 
 EXPOSE 8080
 
