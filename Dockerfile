@@ -1,17 +1,18 @@
-# ----------- Frontend Build Stage -------------
+# ----------- Frontend Build -------------
 FROM node:18-alpine AS frontend
 
 WORKDIR /app
-
 COPY frontend/package*.json ./frontend/
 RUN cd frontend && npm install
-
 COPY frontend ./frontend
 RUN cd frontend && npm run build
 
 
-# ----------- Backend Build Stage -------------
+# ----------- Backend Build with CGo + SQLite -------------
 FROM golang:1.21 AS backend
+
+# Install required libs for SQLite
+RUN apt-get update && apt-get install -y gcc libsqlite3-dev
 
 WORKDIR /app
 
@@ -19,18 +20,20 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY ./backend ./backend
-
-# ✅ Correct path from frontend build
 COPY --from=frontend /app/frontend/build ./frontend/build
 
 WORKDIR /app/backend
 
-# Static build: no GLIBC required
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server ./cmd
+# ✅ Enable CGO
+ENV CGO_ENABLED=1
+RUN go build -o server ./cmd
 
 
-# ----------- Final Minimal Stage -------------
-FROM scratch
+# ----------- Final Runtime Stage -------------
+FROM debian:bookworm-slim
+
+# Install only runtime dependency for SQLite
+RUN apt-get update && apt-get install -y libsqlite3-0 && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -39,4 +42,4 @@ COPY --from=backend /app/frontend/build ./frontend/build
 
 EXPOSE 8080
 
-ENTRYPOINT ["/app/server"]
+CMD ["./server"]
