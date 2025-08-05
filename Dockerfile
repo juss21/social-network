@@ -20,7 +20,7 @@ RUN go mod download
 
 # Copy backend source and frontend build
 COPY ./backend ./backend
-COPY --from=frontend /app/frontend/build ./frontend/build
+COPY --from=frontend /frontend/build ./frontend/build
 
 # Static build: no GLIBC required
 WORKDIR /app/backend
@@ -36,7 +36,7 @@ WORKDIR /app
 COPY --from=backend /app/backend/server ./server
 
 # Copy frontend static files
-COPY --from=backend /app/backend/frontend/build ./frontend/build
+COPY --from=backend /app/frontend/build ./frontend/build
 
 # Expose port
 EXPOSE 8080
