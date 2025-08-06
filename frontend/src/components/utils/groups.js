@@ -1,4 +1,4 @@
-const host = `http://${window.location.hostname}:8081`;
+const host = `https://social-network-h4b5.onrender.com`;
 
 export const getGroups = async (id) => {
   const response = await fetch(`${host}/groups/${id}`);
