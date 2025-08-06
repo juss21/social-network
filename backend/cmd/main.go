@@ -23,12 +23,16 @@ func main() {
 }
 
 func getPort() string {
-	serverPort := "8081" // 8081 port by default
+	port := os.Getenv("PORT")
+	if port != "" {
+		return port
+	}
 	if len(os.Args) > 1 {
-		port, err := strconv.Atoi(os.Args[1])
-		if err == nil {
-			serverPort = strconv.Itoa(port)
+		if parsed, err := strconv.Atoi(os.Args[1]); err == nil {
+			return strconv.Itoa(parsed)
 		}
 	}
-	return serverPort
+
+	// 3. Fallback to default port
+	return "8081"
 }
