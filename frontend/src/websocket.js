@@ -12,7 +12,7 @@ export function wsAddConnection() {
     if (window["WebSocket"]) {
       let currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
       const ws = new WebSocket(
-        `ws://localhost:8081/ws?UserID=${currentUser.UserID}`
+        `wss://social-network-h4b5.onrender.com/ws?UserID=${currentUser.UserID}`
       );
 
       ws.onopen = () => {
