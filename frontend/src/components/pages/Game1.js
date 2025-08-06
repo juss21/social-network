@@ -4,7 +4,7 @@ const Game1 = () => {
       <div className="game">
         <iframe
           className="center-vertically"
-          src="http://joelsoft.eu:1111"
+          src="https://leprechaun-the-game.onrender.com"
           title="make-your-game"
         />
       </div>
