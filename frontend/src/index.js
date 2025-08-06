@@ -15,7 +15,7 @@ import Logout, { clearAllCookies } from "./components/pages/Logout.js";
 import Feed from "./components/pages/Feed.js";
 import "./css/Sidepanels.css";
 import { getCookieValue } from "./jwt.js";
-export const backendHost = "http://localhost:8081";
+export const backendHost = "https://social-network-h4b5.onrender.com";
 
 export function getLoggedUserFromStorage(parse = false, forceLogout = false) {
   const loggedUser = sessionStorage.getItem("CurrentUser");
