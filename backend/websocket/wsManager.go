@@ -89,7 +89,7 @@ func checkOrigin(r *http.Request) bool {
 	origin := r.Header.Get("Origin")
 
 	switch origin {
-	case "http://localhost:8080":
+	case "https://social-network-front-sooty.vercel.app":
 		return true
 	default:
 		return false
