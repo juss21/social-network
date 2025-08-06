@@ -16,7 +16,7 @@ type CorsHandler struct {
 
 func (c CorsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// The CORS headers
-	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:8080") // origin
+	w.Header().Set("Access-Control-Allow-Origin", "https://social-network-front-sooty.vercel.app") // origin
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")   // methods
 	w.Header().Set("Access-Control-Allow-Headers", "*")                    // headers
 	w.Header().Set("Access-Control-Allow-Credentials", "true")             // cookies
