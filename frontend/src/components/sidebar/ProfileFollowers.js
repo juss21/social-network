@@ -43,7 +43,7 @@ const ProfileFollowers = () => {
         {followingList &&
           followingList.map((element) => (
             <p key={element.UserId}>
-              <a href={`http://localhost:8080/profile/${element.UserName}`}>
+              <a href={`https://social-network-front-sooty.vercel.app/profile/${element.UserName}`}>
                 {element.UserName}
               </a>
             </p>
@@ -52,7 +52,7 @@ const ProfileFollowers = () => {
         {followersList &&
           followersList.map((element) => (
             <p key={element.UserId}>
-              <a href={`http://localhost:8080/profile/${element.UserName}`}>
+              <a href={`https://social-network-front-sooty.vercel.app/profile/${element.UserName}`}>
                 {element.UserName}
               </a>
             </p>
